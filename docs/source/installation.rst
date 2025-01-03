@@ -4,26 +4,26 @@ Installation
 Setup Instructions
 ------------------
 
-From a terminal, clone the repository
+From a terminal, clone the repository:
 
 .. code-block:: console
 
     $ git clone https://github.com/lanl/SuperNu.git supernu
 
-If https protocal does not work, try ssh
+If https protocal does not work, try ssh:
 
 .. code-block:: console
 
     $ git clone git@github.com:lanl/SuperNu.git supernu
 
-Verify checkout
+Verify checkout:
 
 .. code-block:: console
 
     $ cd supernu
     $ ls
 
-Starting from the source directory, to build
+Starting from the source directory, to build:
 
 .. code-block:: console
 
