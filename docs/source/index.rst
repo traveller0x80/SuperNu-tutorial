@@ -13,14 +13,14 @@ Thank you,
 the authors
 
 
-#Contents
-# --------
+Contents
+--------
 
-#.. toctree::
+.. toctree::
 
-#   Overview
-   
-#   Installation
+   overview
+
+   installation
 
 
 SuperNu Method Papers
