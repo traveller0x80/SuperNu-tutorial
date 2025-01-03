@@ -2,12 +2,11 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'SuperNu'
+copyright = '2025, D Fernando'
+author = 'D Fernando'
 
-release = '0.1'
-version = '0.1.0'
+version = 'latest'
 
 # -- General configuration
 
