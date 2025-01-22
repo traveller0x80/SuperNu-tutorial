@@ -10,7 +10,8 @@ SuperNu, Version 4.x, is a continuation of SuperNu, Version 3.x.
 If you use SuperNu, Version 4.x, we ask you to appropriately acknowledge SuperNu and cite the papers in which the methods are described.
 
 Thank you,
-the authors
+
+The authors
 
 
 Contents
