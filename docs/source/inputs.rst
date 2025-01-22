@@ -17,12 +17,18 @@ Input Parameters
 
     
 !-- grid geometry and dimensions
-    :code:`in_grd_igeom = 0`
+    :code:`in_grd_igeom = 1`
         - integer
-        - geometry: 1=sph, 2=cyl, 3=car, 11=1Dsph
-    :code:`in_ndim(3) = 1, 1, 1`
+        - geometry
+        - options: 
+              - :code:`1` for sphere (sph) 
+              - :code:`2` for cylinder (cyl)
+              - :code:`3` for Cartesian (car)
+              - :code:`11` for 1D-sphere (1Dsph)
+    :code:`in_ndim = 1, 1, 1`
         - integer
         - number of x-direction cells
+        - examples: :code:`64, 1, 1` for 1D case, :code:`64, 128, 1` for a 2D case (adjust as needed)
     :code:`in_isvelocity = t`
         - logical 
         - switch underlying grid between spatial+static to velocity+expanding
