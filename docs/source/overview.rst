@@ -31,66 +31,67 @@ TODO: update the following.
 **Particles**:
     - MC Particles are generated in locations where energy sources are non-zero.
     - Energy sources include:
-      - boundary and volume sources,
-      - manufactured-solution sources,
-      - tabular sources,
-      - inline energy deposition by radioactive decay.
+        - boundary and volume sources,
+        - manufactured-solution sources,
+        - tabular sources,
+        - inline energy deposition by radioactive decay.
     - Particles that get censused at the end of a timestep are stored in the particle array.
 
 **Transport**:
     - Particle transport methods are:
-      - Implicit Monte Carlo (IMC),
-      - Discrete Diffusion Monte Carlo (DDMC).
+        - Implicit Monte Carlo (IMC),
+        - Discrete Diffusion Monte Carlo (DDMC).
     - DDMC is used in optically thick regions of a domain.
     - Geometries:
-      - 1D,3D spherical,
-      - 2D,3D cylindrical,
-      - 3D cartesian.
+        - 1D,3D spherical,
+        - 2D,3D cylindrical,
+        - 3D cartesian.
     - particle transport is parallelized using a hybrid of MPI and OpenMP
 
 **Spatial grid**:
     - The grid is the domain over which MC particles are tracked.
     - The grid can either be a spatial or a velocity mesh.
     - If the grid is physically moving:
-      - the grid has units of velocity,
-      - the velocity grid is not affected by the radiation field,
-      - the velocity grid is constant.
+        - the grid has units of velocity,
+        - the velocity grid is not affected by the radiation field,
+        - the velocity grid is constant.
     - If the grid is physically static:
-      - the grid is in units of length,
-      - the domain is static (no velocity field).
+        - the grid is in units of length,
+        - the domain is static (no velocity field).
 
 Gas:
     - Gas properties are domain decomposed.
     - Gas properties are updated after transport steps.
     - Gas properties include:
-      - chemical composition,
-      - density,
-      - material temperature,
-      - heat capacity,
-      - opacity: Thomson scattering, and multi-frequency absorption.
+        - chemical composition,
+        - density,
+        - material temperature,
+        - heat capacity,
+        - opacity: Thomson scattering, and multi-frequency absorption.
     - Leakage (DDMC) and Planck opacities are calculated from scattering and absorption opacities.
     - Mutli-group absorption opacity includes bound-bound (bb), bound-free (bf), and free-free (ff) data:
-      - line data for bound-bound opacities are taken from http://kurucz.harvard.edu/atoms.html.
+        - line data for bound-bound opacities are taken from http://kurucz.harvard.edu/atoms.html.
 
 **Groups**:
     - By default opacity frequency dependence is discretized with multi-group.
-      - The frequency-resolved opacities are averaged within each group.
+        - The frequency-resolved opacities are averaged within each group.
 
 **IO**:
     - input is divided in two categories:
-      - model specific input files are named input.* and (see the Input/ directory):
-        - input.par: runtime parameters,
-        - input.str: velocity-density-composition structure on the computational domain.
-      - model independent data files are named data.* (see the Data/ directory):
-        - data.bf_verner: bound-free cross section data (Verner et al. 1996, ApJ 465, 487)
-        - data.ff_sutherland: free-free gaunt factor data (Sutherland 1998, MNRAS 300, 321)
-        - data.ion: atomic level data (from http://kurucz.harvard.edu/atoms.html)
-        - Atoms/data.atom.* bound-bound transition data
+        - model specific input files are named input.* and (see the Input/ directory):
+            - input.par: runtime parameters,
+            - input.str: velocity-density-composition structure on the computational domain.
+        - model independent data files are named data.* (see the Data/ directory):
+            - data.bf_verner: bound-free cross section data (Verner et al. 1996, ApJ 465, 487)
+            - data.ff_sutherland: free-free gaunt factor data (Sutherland 1998, MNRAS 300, 321)
+            - data.ion: atomic level data (from http://kurucz.harvard.edu/atoms.html)
+            - Atoms/data.atom.* bound-bound transition data
     - output files are named output.*
-      - stdout is written to output.log unless disabled in by an input parameter.
-      - flux variables are saved as output.flx_*
-      - grid variables are saved as output.grd_*
-      - total (integrated over the domain) energy budget numbers are saved as output.tot_energy
+        - stdout is written to output.log unless disabled in by an input parameter.
+        - flux variables are saved as output.flx_*
+        - grid variables are saved as output.grd_*
+        - total (integrated over the domain) energy budget numbers are saved as output.tot_energy
+
 
 SuperNu Output
 --------------
