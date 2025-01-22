@@ -23,6 +23,7 @@ Contents
 
    installation
 
+   inputs
 
 SuperNu Method Papers
 ---------------------
